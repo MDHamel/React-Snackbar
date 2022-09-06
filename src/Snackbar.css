@@ -1,0 +1,131 @@
+.bar{
+    width: 20vw;
+    height: 100vh;
+    z-index: 10000;
+    position: absolute;
+
+    background-color: #3f7a5f;
+}
+
+.hamburger{
+    filter: invert(.95);
+    width: 2vw;
+    margin-top: 20px;
+}
+
+.buffet{
+    white-space: nowrap;
+    color: white;
+    user-select: none;
+}
+
+
+
+.snack{
+    margin-left: 50px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    
+}
+
+.candy{
+    transition: all .4s;
+    width:fit-content;
+    overflow: hidden;
+    max-height: 1000px;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+.candy.squish{
+    max-height: 0;
+    margin: 0;
+}
+
+.candy li{
+    margin-bottom: 20px;
+}
+
+.clickable{
+    cursor:pointer;
+}
+
+.clickable :hover{
+    color: rgb(158, 238, 211);
+}
+
+.clickable :active{
+    color: rgb(162, 171, 255);
+}
+
+.hamburger.expand{
+    animation-name: hamexpand;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+
+.hamburger.compress{
+    animation-name: hamcompress;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+}
+
+.bar.compress{
+    animation-name: compress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.bar.expand{
+    animation-name: expand;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.buffet.compress{
+    animation-name: tohide;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.buffet.expand{
+    animation-name: toshow;
+    animation-delay: .25s;
+    animation-duration: .5s;
+    animation-fill-mode: backwards;
+    
+}
+
+
+
+
+@keyframes tohide {
+    from {opacity: 1;}
+    to{opacity: 0; width: 0; visibility: hidden;}
+}
+
+@keyframes toshow {
+    from{opacity: 0; visibility: visible;}
+    to{opacity: 1; width: auto;}
+}
+
+@keyframes expand{
+    from{width: 4vw;}
+    to{width:20%}
+}
+
+@keyframes compress{
+    from{width: 20%;}
+    to{width:4vw}
+}
+
+@keyframes hamexpand{
+    from{margin-left: 1vw;}
+    to{margin-left:80%}
+}
+
+@keyframes hamcompress{
+    from{margin-left: 80%;}
+    to{margin-left: 1vw}
+}

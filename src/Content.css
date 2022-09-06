@@ -1,0 +1,11 @@
+
+.content{
+    margin-left: 75px;
+    max-width: 99vw;
+    overflow: hidden;
+}
+
+.content img{
+    margin-left: auto;
+    width: 100%;
+}
